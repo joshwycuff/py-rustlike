@@ -2,7 +2,7 @@
 from __future__ import annotations
 import logging
 import traceback
-from typing import cast, Generic, Optional as Opt, TypeVar, Union
+from typing import Generic, Optional as Opt, TypeVar, Union
 
 # internal
 from rustlike.base_exception import RustLikeException
@@ -258,7 +258,7 @@ def resultify(
                 return Ok.new(func(*args, **kwargs))
             except exception_type as error:
                 if logger is not None:
-                    logger.error(error)
+                    logger.error(f'{str(error)}\n{repr(error)}')
                 return Err.new(error)
         return wrapper
     return decorator
