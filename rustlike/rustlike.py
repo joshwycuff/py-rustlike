@@ -258,7 +258,7 @@ def resultify(
                 return Ok.new(func(*args, **kwargs))
             except exception_type as error:
                 if logger is not None:
-                    logger.error(f'{str(error)}\n{repr(error)}')
+                    logger.error(f'{str(error)}\n{repr(error)}\n{traceback.format_exc()}')
                 return Err.new(error)
         return wrapper
     return decorator
