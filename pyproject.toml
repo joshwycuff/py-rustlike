@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rustlike"
-version = "0.1.0"
+version = "0.1.1"
 description = "Rust-like API in Python"
 authors = ["Josh Wycuff <Joshua.Wycuff@turner.com>"]
 license = "MIT"
